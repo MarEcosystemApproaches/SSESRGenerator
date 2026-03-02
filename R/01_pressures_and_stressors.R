@@ -551,6 +551,12 @@ pressures_and_stressors <- function(.region, .ps_vars){
            long_term_climate_change_header,
            long_term_climate_change_body)
 
+  # make sure out ends with newpage, otherwise, add it.
+  # (this occurs when not all ps_vars are selected)
+  if(!out[length(out)-2] == "\\newpage"){
+    out <- c(out,"\\newpage","","")
+  }
+
   return(out)
 
 

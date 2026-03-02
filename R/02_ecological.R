@@ -876,6 +876,13 @@ ecological_indicators <- function(.region, .ecol_vars){
            nontarget_species_body
   )
 
+  # make sure out ends with newpage, otherwise, add it.
+  # (this occurs when not all ecol_vars are selected)
+  if(!out[length(out)-2] == "\\newpage"){
+    out <- c(out,"\\newpage","","")
+  }
+
+
   return(out)
 
 

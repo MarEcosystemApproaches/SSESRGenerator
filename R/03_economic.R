@@ -78,6 +78,13 @@ economic_indicators <- function(.region, .econ_vars){
            commercial_fisheries_value_body
   )
 
+  # make sure out ends with newpage, otherwise, add it.
+  # (this occurs when not all econ_vars are selected)
+  if(!out[length(out)-2] == "\\newpage"){
+    out <- c(out,"\\newpage","","")
+  }
+
+
   return(out)
 
 
