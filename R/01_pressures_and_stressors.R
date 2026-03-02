@@ -209,7 +209,7 @@
 
   blank <-
     c(
-      '### AZMP Surface Temperature; local scale (Scotian Shelf Box)',
+      '### AZMP Surface Temperature',
       '',
       '[Casault et al. 2020](https://casaultb.github.io/azmpdata/)',
       '',
