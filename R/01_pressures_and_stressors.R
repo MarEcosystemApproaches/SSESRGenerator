@@ -337,7 +337,7 @@
   )
 
   blank <-  c(
-    '### AZMP Stratification; local scale (Scotian Shelf Box)',
+    '### AZMP Stratification',
     '',
     '[Layton et al. 2025](https://publications.gc.ca/collections/collection_2025/mpo-dfo/Fs97-18-403-eng.pdf)',
     '',
@@ -387,7 +387,7 @@
   )
 
   blank <- c(
-    '### AZMP Salinity; local scale (Scotian Shelf Box)',
+    '### AZMP Salinity',
     '',
     '[Layton et al. 2025](https://publications.gc.ca/collections/collection_2025/mpo-dfo/Fs97-18-403-eng.pdf)',
     '',
