@@ -114,7 +114,9 @@
                          "4W" = 'c("4W")',
                          "4V" = 'c("4Vn", "4Vs")',
                          "ESS" = 'c("4Vn", "4Vs", "4W")',
-                         "WSS" = 'c("4XSS")'
+                         "WSS" = 'c("4XSS")',
+                         "4VN" = 'c("4Vn")',
+                         "4VS" = 'c("4Vs")'
   )
 
   .region_code_text <- .region_code %>% str_remove_all('"') %>% str_remove("c") %>%
@@ -245,7 +247,9 @@
                          "4W" = 'c("4W")',
                          "4V" = 'c("4Vn", "4Vs")',
                          "ESS" = 'c("4Vn", "4Vs", "4W")',
-                         "WSS" = 'c("4X")'
+                         "WSS" = 'c("4X")',
+                         "4VN" = 'c("4Vn")',
+                         "4VS" = 'c("4Vs")'
   )
 
   .region_code_text <- .region_code %>%

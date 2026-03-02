@@ -10,7 +10,9 @@
                          "4VS" = 'c("4VS")',
                          "4VN" = 'c("4VN")',
                          "ESS" = 'c("ESS")',
-                         "WSS" = 'c("WSS")'
+                         "WSS" = 'c("WSS")',
+                         "4VN" = 'c("4VN")',
+                         "4VS" = 'c("4VS")'
   )
 
   .region_code_text <- .region_code %>%
@@ -121,7 +123,9 @@
                          "4VS" = 'c("4VS")',
                          "4VN" = 'c("4VN")',
                          "ESS" = 'c("ESS")',
-                         "WSS" = 'c("WSS")'
+                         "WSS" = 'c("WSS")',
+                         "4VN" = 'c("4VN")',
+                         "4VS" = 'c("4VS")'
   )
 
   .region_code_text <- .region_code %>%
@@ -585,7 +589,9 @@
                          "4VS" = 'c("4VS")',
                          "4VN" = 'c("4VN")',
                          "ESS" = 'c("ESS")',
-                         "WSS" = 'c("WSS")'
+                         "WSS" = 'c("WSS")',
+                         "4VN" = 'c("4VN")',
+                         "4VS" = 'c("4VS")'
   )
 
   .region_code_text <- .region_code %>%
@@ -689,7 +695,9 @@
                          "4VS" = 'c("4VS")',
                          "4VN" = 'c("4VN")',
                          "ESS" = 'c("ESS")',
-                         "WSS" = 'c("WSS")'
+                         "WSS" = 'c("WSS")',
+                         "4VN" = 'c("4VN")',
+                         "4VS" = 'c("4VS")'
   )
 
   .region_code_text <- .region_code %>%
