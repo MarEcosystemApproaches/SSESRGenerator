@@ -123,7 +123,7 @@
 
   not_blank <-
     c(
-      glue::glue('### AZMP Surface Temperature from Satellite Data; local scale {.region_code_text}'),
+      glue::glue('### AZMP Surface Temperature from Satellite Data; local scale ({.region_code_text})'),
       '',
       '[Casault et al. 2020](https://casaultb.github.io/azmpdata/)',
       '',
@@ -248,12 +248,14 @@
                          "WSS" = 'c("4X")'
   )
 
-  .region_code_text <- .region_code %>% str_remove_all('"') %>% str_remove("c") %>%
+  .region_code_text <- .region_code %>%
+    str_remove_all('"') %>%
+    str_remove("c") %>%
     str_remove("\\(") %>%
     str_remove("\\)")
 
   not_blank <- c(
-    glue::glue('### AZMP Sea Bottom Temperature; local scale {.region_code_text}'),
+    glue::glue('### AZMP Sea Bottom Temperature; local scale ({.region_code_text})'),
     '',
     '[Casault et al. 2020](https://casaultb.github.io/azmpdata/)',
     '',

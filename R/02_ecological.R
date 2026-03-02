@@ -13,8 +13,14 @@
                          "WSS" = 'c("WSS")'
   )
 
+  .region_code_text <- .region_code %>%
+    str_remove_all('"') %>%
+    str_remove("c") %>%
+    str_remove("\\(") %>%
+    str_remove("\\)")
+
   not_blank <- c(
-    glue::glue('### Fisheries Landings; local scale {.region_code}'),
+    glue::glue('### Fisheries Landings; local scale ({.region_code_text})'),
     '',
     'Commercial fishing is an activity that impacts the ecology of a management area through removals of fish from the ecosystem',
     '',
@@ -118,9 +124,15 @@
                          "WSS" = 'c("WSS")'
   )
 
+  .region_code_text <- .region_code %>%
+    str_remove_all('"') %>%
+    str_remove("c") %>%
+    str_remove("\\(") %>%
+    str_remove("\\)")
+
   not_blank <-
     c(
-      glue::glue('### Fisheries Pressure; local scale {.region_code}'),
+      glue::glue('### Fisheries Pressure; local scale ({.region_code_text})'),
       '',
       'This indicator measures the level of exploitation or total fishing pressure at the ecosystem level (Landings/Biomass). Change in this indicator can result from change in biomass, landings or both.',
       '',
@@ -576,10 +588,16 @@
                          "WSS" = 'c("WSS")'
   )
 
+  .region_code_text <- .region_code %>%
+    str_remove_all('"') %>%
+    str_remove("c") %>%
+    str_remove("\\(") %>%
+    str_remove("\\)")
+
 
   not_blank <-
     c(
-      glue::glue('### Shannon Diversity Index, Margalef Richness, Heip’s Evenness; local scale {.region_code}'),
+      glue::glue('### Shannon Diversity Index, Margalef Richness, Heip’s Evenness; local scale ({.region_code_text})'),
       '',
       'Shannon Diversity Index accounts for both abundance and evenness of species present in a community. Margalef Richness measures the number of species present accounting for sampling effects. Heips Evenness measures how equally the species richness contributes to the total abundance or biomass of the community. Due to improvements in species identification over time, long-term Shannon Diversity and Margalef richness can be misleading, only years 2000-2020 were used here.',
       '',
@@ -634,7 +652,7 @@
 
   blank <-
     c(
-      '### Shannon Diversity Index, Margalef Richness, Heip’s Evenness; local scale',
+      '### Shannon Diversity Index, Margalef Richness, Heip’s Evenness',
       '',
       'Shannon Diversity Index accounts for both abundance and evenness of species present in a community. Margalef Richness measures the number of species present accounting for sampling effects. Heips Evenness measures how equally the species richness contributes to the total abundance or biomass of the community. Due to improvements in species identification over time, long-term Shannon Diversity and Margalef richness can be misleading, only years 2000-2020 were used here.',
       '',
@@ -674,9 +692,15 @@
                          "WSS" = 'c("WSS")'
   )
 
+  .region_code_text <- .region_code %>%
+    str_remove_all('"') %>%
+    str_remove("c") %>%
+    str_remove("\\(") %>%
+    str_remove("\\)")
+
   not_blank <-
     c(
-      glue::glue('### Guild-Level Biomass; local scale {.region_code}'),
+      glue::glue('### Guild-Level Biomass; local scale ({.region_code_text})'),
       '',
       'Guild-level biomasses address structural attributes of food webs, and can also serve as proxies for ecosystem functioning ([Tam et al. 2017](https://academic.oup.com/icesjms/article/74/7/2040/2970046)). This indicator includes multiple guilds for fish and invertebrates from the RV Survey.',
       '',
