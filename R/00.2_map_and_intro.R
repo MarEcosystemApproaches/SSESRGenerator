@@ -13,8 +13,20 @@ map_and_intro <- function(.region){
                          "4W" = 'c("4W")',
                          "4V" = 'c("4V")',
                          "ESS" = 'c("4V","4W")',
-                         "WSS" = 'c("4X")'
+                         "WSS" = 'c("4X")',
+                         "4VN" = 'c("4VN")',
+                         "4VS" = 'c("4VS")'
   )
+
+  map_subset <- switch(.region,
+                       "4X" = glue::glue('filter(NAFO_1 %in% {.region_code})'),
+                       "4W" = glue::glue('filter(NAFO_1 %in% {.region_code})'),
+                       "4V" = glue::glue('filter(NAFO_1 %in% {.region_code})'),
+                       "ESS" = glue::glue('filter(NAFO_1 %in% {.region_code})'),
+                       "WSS" = glue::glue('filter(NAFO_1 %in% {.region_code})'),
+                       "4VN" = glue::glue('filter(NAFO_2 %in% {.region_code})'),
+                       "4VS" = glue::glue('filter(NAFO_2 %in% {.region_code})')
+                       )
 
   not_blank <- c(
     sprintf('```{r make-map-ess, out.width="75%%", fig.align="center", fig.cap="Map of Region: %s"}',.region),
@@ -25,7 +37,7 @@ map_and_intro <- function(.region){
     'bbox <- c(xmin = -75, xmax = -50, ymin = 35, ymax = 50)',
     '',
     'target_region <- NAFO_shapefiles %>%',
-    glue::glue('filter(NAFO_1 %in% {.region_code})'),
+    map_subset,
     '',
     '# make map',
     'target_area_map <- ggplot() +',
