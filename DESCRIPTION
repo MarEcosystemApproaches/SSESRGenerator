@@ -1,0 +1,18 @@
+Package: SSESRGenerator
+Type: Package
+Title: Generate Template Ecosystem Summary Reports for Scotian Shelf region. 
+Version: 0.1.0
+Authors@R: c(
+    person(
+      "Jake", "Lawlor",
+      email = "jakealawlor@gmail.com",
+      role = c("aut", "cre")
+    )
+  )
+Description: Generates R Markdown templates for Ecosystem Summary Reports, which require manual fillingand data interpretation. 
+License: CC0
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.3.3
+Depends: 
+    R (>= 3.5)
