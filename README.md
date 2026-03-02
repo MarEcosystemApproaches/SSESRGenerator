@@ -3,7 +3,7 @@
 
 This package enables automated templating of Ecosystem Summary Report templates for target Scotian Shelf Regions. Use this package to generate .Rmd reports with pre-filled template sections for seven Scotian Shelf target regions, or a blank template report skeleton. 
 
-Generated report templates include pre-defined outline sections for ESR objectives and pre-generated plots for target indicators, but require manual editing and interpretation of ESR data. 
+Generated report templates include pre-defined outline sections for ESR objectives and pre-generated plots for target indicators from data in the [`marea`](https://github.com/MarEcosystemApproaches/marea) package, but require manual editing and interpretation of ESR data. 
 
 
 ## Download the package
