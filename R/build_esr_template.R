@@ -45,15 +45,16 @@ build_esr_template <- function(region,
 
   # first, source all functions in the sections/ folder,
   # which will contain the bodies of all the sections individually.
-  sections_path <- "report_generation_functions/template_report_helpers"
-  section_files <- list.files(sections_path, full.names = T)
-  lapply(section_files, source)
+  # sections_path <- "report_generation_functions/template_report_helpers"
+  # section_files <- list.files(sections_path, full.names = T)
+  # lapply(section_files, source)
+  # note: commenting out, because we only need this to run when it was
+  # a local repository. Loading the package already loads these functions
 
+  # check if template file already exists ----------------
+  path <- paste0(out.dir,"/",region,"_esr_template_",Sys.Date(),".Rmd")
 
-  # check if template file already exists
-  path <- paste0("template_reports/",region,"esr_template_",Sys.Date(),".Rmd")
-
-  # check if there's already a page for indicator
+  # if yes, ask to replace -------------------------------
   if (file.exists(path)) {
 
     cat("Warning: Template Report already exists.\n",
@@ -63,17 +64,17 @@ build_esr_template <- function(region,
     ans <- readline(("Type 'y' to overwrite or 'n' to cancel: "))
 
     # stop if answer isn't y or n
-    if(!ans %in% c("y","n")){
+    if(!ans %in% c("y","Y","n","N")){
       stop("Answer must be 'y' or 'n' ", call. = FALSE)
     }
 
-    # stop if answer is n
-    if(ans == c("n")){
+    # stop function if answer is n
+    if(ans %in% c("n","N")){
       message("Cancelled. Existing template report kept: ", path)
       return(invisible(FALSE)) # end function
     }
 
-    # if yes, print that the chapter will be overwritten
+    # if yes, print that the file will be overwritten
     message("Overwriting existing template report: ", path)
   }
 
@@ -109,7 +110,7 @@ build_esr_template <- function(region,
   )
 
 
-  # start building RMD report -----------------------------------------------
+  # Build RMD report -----------------------------------------------
   dir.create(out.dir, showWarnings = F)
   out.path <- file.path(out.dir, paste0(region,"_","esr_template_",Sys.Date(),".Rmd"))
   writeLines(lines, out.path)
